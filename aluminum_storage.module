@@ -65,7 +65,12 @@ function aluminum_storage_aluminum_storage_social_networks() {
       'name' => 'Flickr',
       'className' => 'flickr',
       'placeholder' => 'https://www.flickr.com/photos/[YourName]',
-    ]
+    ],
+    'instagram' => [
+      'name' => 'Instagram',
+      'className' => 'instagram',
+      'placeholder' => 'https://www.instagram.com/[YourName]',
+    ],
   ];
 }
 
