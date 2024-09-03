@@ -2,7 +2,7 @@ name: Aluminum Storage
 type: module
 description: "Provides variable storage and a configuration UI for Aluminum and third party modules."
 version: 8.x-1.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
 package: Aluminum
 dependencies:
-  - aluminum
+  - aluminum:aluminum
