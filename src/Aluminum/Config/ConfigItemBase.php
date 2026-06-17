@@ -109,7 +109,7 @@ abstract class ConfigItemBase implements ConfigItemInterface {
   /**
    * {@inheritdoc}
    */
-  public function getFieldArray(FormState $formState = NULL) {
+  public function getFieldArray(?FormStateInterface $formState = NULL) {
     return $this->buildFieldArray();
   }
 
