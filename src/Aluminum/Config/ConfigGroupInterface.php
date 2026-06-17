@@ -109,7 +109,7 @@ interface ConfigGroupInterface {
    * @param \Drupal\Core\Form\FormStateInterface|NULL $formState
    * @return array
    */
-  public function getFormArray(FormStateInterface $formState = NULL);
+  public function getFormArray(?FormStateInterface $formState = NULL);
 
   /**
    * Let the config object pass the form state to each config item in turn and
