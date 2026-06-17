@@ -110,7 +110,7 @@ interface ConfigItemInterface {
    * @param \Drupal\Core\Form\FormStateInterface|NULL $formState
    * @return bool TRUE if the value is set, FALSE otherwise.
    */
-  public function hasValue(FormStateInterface $formState = NULL);
+  public function hasValue(?FormStateInterface $formState = NULL);
 
   /**
    * Gets the current value of this configuration field, falling back to
@@ -119,7 +119,7 @@ interface ConfigItemInterface {
    * @param \Drupal\Core\Form\FormStateInterface $formState
    * @return mixed The current value of this configuration field
    */
-  public function getValue(FormStateInterface $formState = NULL);
+  public function getValue(?FormStateInterface $formState = NULL);
 
   /**
    * Sets a new value of this config item and saves it.
