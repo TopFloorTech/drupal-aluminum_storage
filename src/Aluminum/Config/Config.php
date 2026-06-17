@@ -148,7 +148,7 @@ class Config implements ConfigInterface {
   /**
    * {@inheritdoc}
    */
-  public function getFormArray(FormStateInterface $formState = NULL) {
+  public function getFormArray(?FormStateInterface $formState = NULL) {
     $formArray = [];
 
     $formArray[$this->getFormId()] = [
@@ -168,7 +168,7 @@ class Config implements ConfigInterface {
   /**
    * {@inheritdoc}
    */
-  public function submitFormData(FormStateInterface $formState, $save = TRUE) {
+  public function submitFormData(?FormStateInterface $formState, $save = TRUE) {
     $success = TRUE;
 
     foreach ($this->getConfigGroups() as $groupId => $group) {
