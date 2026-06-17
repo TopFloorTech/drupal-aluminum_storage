@@ -96,7 +96,7 @@ interface ConfigInterface {
    * @param \Drupal\Core\Form\FormStateInterface|NULL $formState
    * @return array
    */
-  public function getFormArray(FormStateInterface $formState = NULL);
+  public function getFormArray(?FormStateInterface $formState = NULL);
 
   /**
    * Let the config object pass the form state to each config item in turn and
@@ -106,7 +106,7 @@ interface ConfigInterface {
    * @param bool $save
    * @return bool TRUE if succeeded, FALSE if failed
    */
-  public function submitFormData(FormStateInterface $formState, $save = TRUE);
+  public function submitFormData(?FormStateInterface $formState, $save = TRUE);
 
   /**
    * Saves current config data for this object to storage.
