@@ -27,7 +27,7 @@ class SelectConfigItem extends DefaultConfigItem {
     $this->options += $itemConfig['options'];
   }
 
-  protected function buildFieldArray(FormStateInterface $formState = NULL) {
+  protected function buildFieldArray(?FormStateInterface $formState = NULL) {
     $fieldArray = parent::buildFieldArray($formState);
 
     $fieldArray['#options'] = $this->options;

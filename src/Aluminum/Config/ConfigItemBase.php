@@ -123,7 +123,7 @@ abstract class ConfigItemBase implements ConfigItemInterface {
   /**
    * {@inheritdoc}
    */
-  public function hasValue(FormStateInterface $formState = NULL) {
+  public function hasValue(?FormStateInterface $formState = NULL) {
     if (!is_null($formState) && $this->formValueExists($formState)) {
       return TRUE;
     }
@@ -140,7 +140,7 @@ abstract class ConfigItemBase implements ConfigItemInterface {
   /**
    * {@inheritdoc}
    */
-  public function getValue(FormStateInterface $formState = NULL) {
+  public function getValue(?FormStateInterface $formState = NULL) {
     if (!is_null($formState) && $this->formValueExists($formState)) {
       return $this->getFormValue($formState);
     }
@@ -185,7 +185,7 @@ abstract class ConfigItemBase implements ConfigItemInterface {
    * @param \Drupal\Core\Form\FormStateInterface $formState Optional form state for current request
    * @return mixed
    */
-  protected function buildFieldArray(FormStateInterface $formState = NULL) {
+  protected function buildFieldArray(?FormStateInterface $formState = NULL) {
     $defaults = [
       '#type' => 'textfield',
       '#title' => $this->getName(),
