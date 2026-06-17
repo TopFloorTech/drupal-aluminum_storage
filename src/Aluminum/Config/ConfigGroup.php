@@ -158,7 +158,7 @@ class ConfigGroup implements ConfigGroupInterface {
   /**
    * {@inheritdoc}
    */
-  public function getFormArray(FormStateInterface $formState = NULL) {
+  public function getFormArray(?FormStateInterface $formState = NULL) {
     $formArray = [
       '#title' => $this->getName(),
       '#weight' => $this->getWeight(),
