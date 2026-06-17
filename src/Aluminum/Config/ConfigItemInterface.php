@@ -92,10 +92,11 @@ interface ConfigItemInterface {
    * Gets the render array for this config item to be shown in a
    * settings form.
    *
-   * @param \Drupal\Core\Form\FormState $formState An optional form state object for the current request
+   * @param \Drupal\Core\Form\FormStateInterface $formState 
+   *   An optional form state object for the current request
    * @return array The render array for this config item
    */
-  public function getFieldArray(FormState $formState = NULL);
+  public function getFieldArray(?FormStateInterface $formState = NULL);
 
   /**
    * Gets the base default value for this config item.
