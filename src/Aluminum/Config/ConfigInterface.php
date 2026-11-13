@@ -65,7 +65,7 @@ interface ConfigInterface {
    * @param string|NULL $groupId An optional group ID to set instead
    * @return bool TRUE if successful, FALSE otherwise
    */
-  public function setConfigData($configData, $groupId = NULL);
+  public function setConfigData(mixed $configData, ?string $groupId = NULL): bool;
 
   /**
    * Returns the ConfigGroupInterface for the group ID specified.

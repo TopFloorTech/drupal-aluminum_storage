@@ -13,6 +13,9 @@ use Drupal\aluminum\Aluminum\Exception\AluminumException;
 use Drupal\aluminum\Aluminum\Traits\IdentifiableTrait;
 use Drupal\Core\Form\FormStateInterface;
 
+/**
+ * Contains class Config.
+ */
 class Config implements ConfigInterface {
   use IdentifiableTrait;
 
@@ -98,7 +101,7 @@ class Config implements ConfigInterface {
   /**
    * {@inheritdoc}
    */
-  public function setConfigData($configData, $groupId = NULL) {
+  public function setConfigData(mixed $configData, ?string $groupId = NULL): bool {
     if (!is_null($groupId)) {
       $groupId = $this->normalizeGroupId($groupId);
 
@@ -106,6 +109,7 @@ class Config implements ConfigInterface {
     }
 
     $this->configData = $configData;
+    return TRUE;
   }
 
   /**
@@ -123,7 +127,14 @@ class Config implements ConfigInterface {
     return $this->groups[$groupId];
   }
 
-  protected function normalizeGroupId($groupId) {
+  /**
+   * Normalizes Group id.
+   *
+   * @param string $groupId
+   *
+   * @return mixed
+   */
+  protected function normalizeGroupId(string $groupId): mixed {
     $parts = explode('.', $groupId);
 
     return array_pop($parts);
